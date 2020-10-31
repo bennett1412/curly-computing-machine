@@ -13,7 +13,7 @@ from .forms import PostCreateForm
 
 class PostListView(ListView):
     model =  post 
-    template_name = 'post/home.html'
+    template_name = 'post/base.html'
     context_object_name = "posts"
     ordering = ["-pub_date"]
 
