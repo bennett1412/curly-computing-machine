@@ -5,10 +5,10 @@ from .views import (
     about
 )
 
-app_name = 'post'
+app_name = 'posts'
 
 urlpatterns = [
-    path('',PostListView.as_view(), name = 'main-home'),
-    path('post/new/',PostCreateView.as_view(), name = 'donation-create'),
+    path('',PostListView.as_view(template_name="posts/base.html"), name = 'main-home'),
+    path('post/new/',PostCreateView.as_view(template_name=""), name = 'donation-create'),
     path('about/',about, name = 'main-about')
 ]

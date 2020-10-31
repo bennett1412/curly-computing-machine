@@ -1,0 +1,88 @@
+<style>
+body {
+    height: 100vh;
+    color: white    ;
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+    font-family: 'Montserrat', sans-serif;
+
+    /* Change this color if u want */
+    background-color: black;
+}
+.cover-container {
+  /* max-width: 60vw; */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+  url("https://images.unsplash.com/photo-1475333154578-0538252118ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60://images.pexels.com/photos/226615/pexels-photo-226615.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position: center;
+}
+
+
+.nav-link {
+    padding: 0.25rem 0;
+    /*font-weight: 700;*/
+    color: rgba(255,255,255,0.5);
+    margin-left: 1.5rem;
+    /*border-bottom: 0.25rem solid transparent;*/
+}
+
+
+nav a {
+    padding: 1rem 0;
+    margin: 0 3rem;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav a::before,
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white; /*Change the colour if needed*/
+    left: 0;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+nav a::before {
+    top: 0;
+    transform-origin: left;
+}
+
+nav a::after {
+    bottom: 0;
+    transform-origin: right;
+}
+
+nav a:hover::before,
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-link:hover{
+    color: rgba(255,255,255,0.5);
+    border-bottom-color:rgba(255,255,255,0.5);
+}
+
+.nav-link.active {
+    color: white;
+    border-bottom-color:white;
+
+}
+
+.btn-secondary, .btn-secondary:hover{
+    color: #333;
+    text-shadow: none;
+}
+
+#head{
+    font-weight: 700;
+    font-size: 3rem;
+}
+</style>
