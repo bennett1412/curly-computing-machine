@@ -1,4 +1,4 @@
 # curly-computing-machine
 - hello -mikelord007
-> world - Ashwin
+- world - Ashwin
 - i_men
