@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    #manu apps
+    'useraccounts.apps.UseraccountsConfig',
+
     #my apps
 
     'posts.apps.PostsConfig'
