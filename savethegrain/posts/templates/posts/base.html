@@ -5,29 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fontawesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
     {% include "posts/style1.html" %}
     <title>Save The Grain</title>
 </head>
 <body>
+    <a class="gotopbtn" href="#"><i class="fas fa-arrow-up"></i></a>
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
         {% include "posts/navbar.html" %}
+        
         <main class="px-3 mb-auto text-center">
             <h1 id="head">Save The Grain</h1>
             <p class="quote"> “Respect for food is a respect for life, for who we are and what we do” ...</p>
         </main>
     </div>
-
-    <section id="working">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet officiis ea magnam eligendi hic culpa eos voluptatem dignissimos sed alias incidunt nulla eaque aperiam maxime adipisci, nostrum cum? Voluptates, beatae!Quasi in explicabo ipsam quibusdam, delectus blanditiis nesciunt? Ea dolore eum aliquid quia, quam officia inventore nam aliquam dolores voluptatibus saepe quos cupiditate rem adipisci facere provident reiciendis expedita? Recusandae?</p>
-    </section>
     
-    <section id="contact"></section>
+<section class="service">
+    <div class="container">
+        <h2 class="title">Our Achievements</h2>
+        <p class="subtitle">The credit goes to the Donors</p>
+        
+        <div class="container-fluid text-center">
+            <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+              <div class="rect">
+                <h1>2500</h1>
+                <p>People Fed</p>
+              </div>
+              <div class="rect">
+                <h1>2500</h1>
+                <p>kg of food Donated</p>
+              </div>
+              <div class="rect">
+                <h1>41</h1>
+                <p>Organizations</p>
+              </div>
+            </div>
+          </div>
+    </div>
+</section>
+<section class="section-1" id="about">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-6 col-12">
+          <div class="pray">
+            <img src="data:image/jpeg;base64,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" alt="Pray" class="" />
+          </div>
+        </div>
+        <div class="col-md-6 col-12">
+          <div class="panel text-left">
+            <h1>How This Works?</h1>
+            <p class="pt-4">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere iure adipisci harum ducimus accusantium, repudiandae aperiam
+              voluptatum, id ex ratione omnis reiciendis possimus officiis.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vitae, tenetur quidem eum aliquid vel labore sint placeat
+              ad deserunt consectetur fugit ullam. Eius unde neque ducimus obcaecati ipsum quos vero totam recusandae hic
+              expedita nemo sit, illum harum. Quisquam impedit ullam itaque facere et ad molestiae quod reprehenderit excepturi!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+  <section class="review">
+    <div class="container">
+     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+         <ol class="carousel-indicators">
+           <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+           <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+           <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+         </ol>
+         <div class="carousel-inner">
+           <div class="carousel-item active">
+             <div class="carousel-caption">
+               <h6>Ayimen Latheef</h6>
+               <small>CEO & FOUNDER @ NGO</small>
+               <p>Lorem ipsum, or lipsum as sometimes <br>is dummy text used in Lorem ipsum, or lipsum as sometimes <br>is dummy text used in</p>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <div class="carousel-caption">
+                 <h6>Susan</h6>
+                 <small>CEO & FOUNDER @ NGO</small>
+                 <p>Lorem ipsum, or lipsum as sometimes <br>is dummy text used in Lorem ipsum, or lipsum as sometimes <br>is dummy text used in</p>
+             </div>
+           </div>
+           <div class="carousel-item">
+             <div class="carousel-caption">
+                 <h6>Daniel</h6>
+                 <small>CEO & FOUNDER @ NGO</small>
+                 <p>Lorem ipsum, or lipsum as sometimes <br>is dummy text used in Lorem ipsum, or lipsum as sometimes <br>is dummy text used in</p>
+             </div>
+           </div>
+         </div>
+       </div>
+    </div>
 
+    </section>
+    <section class="footer text-center" id="contact">
+            <div class="pt-4">
+                <h3>Contact Us</h3>
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <div class="icon"><i class="fab fa-github"></i></div>
+            </div>
+            <div class="footer-text">
+                <h3>Kerala, India</h3>
+            </div>
+    </section>
+        
+<!-----script tags all------>
 
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-        crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-------inline----------->
+
+  <script>
+        let nCount = selector => {
+        $(selector).each(function () {
+        $(this)
+            .animate({
+            Counter: $(this).text()
+            }, {
+            duration: 4000,
+            easing: "swing",
+            step: function (value) {
+                $(this).text(Math.ceil(value));
+            }
+            });
+        });
+    };
+    
+    let a = 0;
+    $(window).scroll(function () {
+        let oTop = $(".numbers").offset().top - window.innerHeight;
+        if (a == 0 && $(window).scrollTop() >= oTop) {
+        a++;
+        nCount(".rect > h1");
+        }
+    });
+  </script>           
+</body>
 </html>
