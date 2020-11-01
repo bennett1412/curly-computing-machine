@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Registration Form</title>
+  {% include "useraccounts/signupstyle.html" %}
+  
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="title">
+      Registration Form
+    </div>
+    <form method="POST"> {% csrf_token %}
+    <div class="form">
+       <div class="inputfield">
+          <label for="{{u_form.username.id_for_label}}">Username</label>
+        {% comment %} <input type="text" class="input" placeholder="First Name" required> {% endcomment %}
+        {{u_form.username}}
+       </div>  
+        {% comment %} <div class="inputfield">
+          <label>Last Name</label>
+          <input type="text" class="input" placeholder="Last Name" required>
+       </div>   {% endcomment %}
+       <div class="inputfield">
+          <label for="{{u_form.password1.id_for_label}}">Password</label>
+          {% comment %} <input type="password" class="input" placeholder="Password" required> {% endcomment %}
+          {{u_form.password}}  
+       </div>  
+      <div class="inputfield">
+          <label for="{{u_form.password2.id_for_label}}">Confirm Password</label>
+          {% comment %} <input type="password" class="input" placeholder="Confirm Password" required> {% endcomment %}
+          {{u_form.password2}}  
+       </div> 
+       <div class="inputfield">
+          <label for="{{u_form.email.id_for_label}}">Email Address</label>
+          {% comment %} <input type="email" class="input" placeholder="example@example.com" required> {% endcomment %}
+          {{u_form.email}}
+       </div> 
+        <div class="inputfield">
+          <label for="{{p_form.usertype.id_for_label}}">Type</label>
+          {{p_form.usertype}}
+          {% comment %} <div class="custom_select">
+            <select>
+              <option value="donar">Donor</option>
+              <option value="ecipient">Recipient</option>
+            </select> {% endcomment %}
+          </div>
+       </div> 
+        
+      {% comment %} <div class="inputfield">
+          <label>Phone Number</label>
+          <input type="text" class="input" placeholder="Phone Number" required>
+       </div>  {% endcomment %}
+      <div class="inputfield">
+          <label for="{{ p_form.location.id_for_label }}">Address</label>
+          {% comment %} <textarea class="textarea" placeholder="Address" required></textarea> {% endcomment %}
+          {{ p_form.location }}
+       </div> 
+      <div class="inputfield">
+          <label for="{{ p_form.pincode.id_for_label }}" >Postal Code</label>
+          {{ p_form.pincode }}
+          {% comment %} <input type="text" class="input" placeholder="PIN" required> {% endcomment %}
+       </div> 
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox" required>
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+        <input type="submit" value="Register" class="btn">
+      </div>
+    </div>
+  </form>
+</div>	
+	
+</body>
+</html>

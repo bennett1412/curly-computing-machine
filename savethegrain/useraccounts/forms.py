@@ -1,5 +1,7 @@
 from django import forms  
 from .models import STGUserProfile
+from django.contrib.auth.models import User
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -14,7 +16,7 @@ class STGUserRegister(UserCreationForm):
             'password1': _('nothing'),
         }
 
-class ProfileUpdateForm(forms.ModelForm):
+class ProfileCreationForm(forms.ModelForm):
     class Meta:
         model = STGUserProfile
-        fields = ['user_type','location',]        
+        fields = ['user_type','Location','Pincode']        

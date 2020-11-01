@@ -1,12 +1,14 @@
 from django.db import models
 from django.contrib.auth.models import User
+from PIL import Image
 # Create your models here.
-class STGUser(User):
+class STGUserProfile(models.Model):
     USER_TYPE_CHOICES = (
         ('Donor','Donor'),
         ('NGO', 'NGO'),
     )
-
-    user_type = models.CharField(choices=USER_TYPE_CHOICES)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    #image = models.ImageField(default='default.jpg', upload_to='profile_pics')
+    user_type = models.CharField(max_length=100, choices=USER_TYPE_CHOICES)
     Location = models.TextField(max_length=600)
-    Email = models.EmailField()
+    Pincode = models.PositiveIntegerField()

@@ -1,6 +1,4 @@
-import sys
-sys.path.append("Users\\91958\\Desktop\save the grain\\curly-computing-machine\\savethegrain\\useraccounts\\models.py")
-
+from django.contrib.auth.models import User
 from django.db import models
 from django.utils import timezone
 from django.urls import reverse
@@ -11,7 +9,7 @@ class post(models.Model):
     title = models.CharField(max_length=200)
     content = models.CharField(max_length=500)
     pub_date = models.DateTimeField(default=timezone.now)
-    Donor = models.ForeignKey(STGUser, on_delete=models.CASCADE)
+    Donor = models.ForeignKey(User, on_delete=models.CASCADE)
 
 
     def get_absolute_url(self):
