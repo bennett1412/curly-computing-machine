@@ -12,11 +12,12 @@ def signup(request):
             username = u_form.cleaned_data.get('username')
             raw_password = u_form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
-            p_form.user = user
-            #Profile.objects.create(user=instance)
-            p_form.save()
-            login(request, user)
-            return redirect('donations/')
+            user = u_form.save()
+            profile = p_form.save(commit=False)
+            profile.user = user
+            profile.save()
+            # login(request, user)
+            return redirect('posts:main-home')
     else:
         u_form = STGUserRegister()
         p_form = ProfileCreationForm()
