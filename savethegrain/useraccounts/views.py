@@ -16,8 +16,11 @@ def signup(request):
             profile = p_form.save(commit=False)
             profile.user = user
             profile.save()
-            # login(request, user)
-            return redirect('posts:main-home')
+            login(request, user)
+            if profile.user_type == "NGO":
+                return redirect('posts:ngo-dashboard')
+            else :
+                return redirect('posts:donor-dashboard')    
     else:
         u_form = STGUserRegister()
         p_form = ProfileCreationForm()

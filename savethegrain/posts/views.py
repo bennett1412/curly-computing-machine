@@ -12,14 +12,24 @@ from .forms import PostCreateForm
 
 # Create your views here.
 
-class PostListView(ListView):
+class DonationsListView(ListView):
     model =  post 
-    template_name = 'post/base.html'
+    template_name = 'posts/base.html'
     context_object_name = "posts"
     #ordering = ["-pub_date"]
 
     def get_query_set(self):
         return post.objects.filter(user_type="donor")
+
+class ForDonorsListView(ListView):
+    model =  post 
+    template_name = 'posts/donorDash.html'
+    context_object_name = "posts"
+    #ordering = ["-pub_date"]
+    
+    def get_query_set(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return post.objects.filter(Donor=user).order_by('-pub_date')      
 
 class PostCreateView(LoginRequiredMixin,CreateView):
     model =  post

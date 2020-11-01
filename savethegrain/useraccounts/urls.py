@@ -3,8 +3,8 @@ from .views import (
     signup
 )
 
-app_name = 'posts'
+app_name = 'useraccounts'
 
 urlpatterns = [
-    path('',signup,name="sign-up"),
+    path('',signup,name="signup"),
 ]

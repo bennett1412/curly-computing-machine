@@ -11,8 +11,8 @@ class post(models.Model):
     pub_date = models.DateTimeField(default=timezone.now)
     Donor = models.ForeignKey(User, on_delete=models.CASCADE)
     food_quantity = models.PositiveIntegerField(default=0)
+    # NGO = models.OneToOneField(User,default="NULL")
 
-
-    def get_absolute_url(self):
-        return reverse('blog:post-detail', kwargs={'pk':self.pk})
+    # def get_absolute_url(self):
+    #     return reverse('blog:post-detail', kwargs={'pk':self.pk})
     

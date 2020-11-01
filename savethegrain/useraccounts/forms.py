@@ -22,7 +22,7 @@ class STGUserRegister(UserCreationForm):
 
 class ProfileCreationForm(forms.ModelForm):
     user_type = forms.CharField(widget=forms.Select(choices=USER_TYPE_CHOICES) )
-    Location = forms.Textarea(attrs={'rows':4, 'cols':1})
+    Location = forms.CharField(widget=forms.Textarea(attrs={'rows': 2, 'cols': 30}))
     class Meta:
         model = STGUserProfile
         fields = ['user_type','Location','Pincode']        
