@@ -1,11 +1,12 @@
 from django.http.response import HttpResponse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpRequest
 from django.views.generic import (
     ListView,
     CreateView,
 )
+from django.contrib.auth.models import User
 from .models import post
 from .forms import PostCreateForm
 
@@ -15,7 +16,10 @@ class PostListView(ListView):
     model =  post 
     template_name = 'post/base.html'
     context_object_name = "posts"
-    ordering = ["-pub_date"]
+    #ordering = ["-pub_date"]
+
+    def get_query_set(self):
+        return post.objects.filter(user_type="donor")
 
 class PostCreateView(LoginRequiredMixin,CreateView):
     model =  post
@@ -27,4 +31,8 @@ class PostCreateView(LoginRequiredMixin,CreateView):
 
 
 def about(response):
-    return HttpResponse("<h1>About</h1>")            
+    return HttpResponse("<h1>About</h1>")
+
+def home(response):
+    return render(response,'posts/base.html',{})
+

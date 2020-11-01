@@ -10,6 +10,7 @@ class post(models.Model):
     content = models.CharField(max_length=500)
     pub_date = models.DateTimeField(default=timezone.now)
     Donor = models.ForeignKey(User, on_delete=models.CASCADE)
+    food_quantity = models.PositiveIntegerField(default=0)
 
 
     def get_absolute_url(self):

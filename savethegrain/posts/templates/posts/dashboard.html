@@ -1,0 +1,19 @@
+
+<html>
+<main>
+<br>
+{% comment %} <h1 class="mb-3" > Posts by {{ view.kwargs.username }}</h1> {% endcomment %}
+{% for post in posts %}
+            <span class="mr-2" > {{ post.Donor }} </span>
+            <div> {{ post.title }} </div>
+            <div class="date"> {{ post.pub_date|date:'d M, Y' }}</div>
+            <div> {{ post.location }} </div> 
+            
+            <p> Food Quatity: {{ post.food_quantity }} </p>
+
+
+            
+        </article>
+        </br>
+{% endfor %}
+</html>
